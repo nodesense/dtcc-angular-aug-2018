@@ -1,0 +1,41 @@
+<div>
+    <h2>Welcome to {{appTitle}}</h2>
+
+    <app-header>
+    </app-header>
+
+    <app-home>
+    </app-home>
+
+    <!-- passing data from parent to child using input -->
+    <app-footer  [company]="appTitle"
+                 [year]="2018 + 2" 
+                 [address]="officeAddress"
+                 
+                 >
+    </app-footer>
+
+    <!-- {{expression}} interpolation -->
+    <p>Page Likes {{pageLikes}}</p>
+    <p>Page Likes + 10 {{pageLikes + 10}}</p>
+
+    <!-- []="expression" property binding -->
+    <input [value]="pageLikes" />
+
+    <button [disabled]="pageLikes % 2 == 1">
+        Welcome
+    </button>
+
+    <!-- ()="expression" - event binding -->
+    <button (click)="increment()">
+        +1
+    </button>
+
+    <button (click)="pageLikes = pageLikes - 1">
+        -1
+    </button>
+
+    <button (click)="greeting()">
+        Greet
+    </button>
+</div>
