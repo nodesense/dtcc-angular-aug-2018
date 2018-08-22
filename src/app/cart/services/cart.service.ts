@@ -11,8 +11,21 @@ export class CartService {
   // [] is JavaScript Array
   cartItems: CartItem[] = [];
 
+  amount: number = 0;
+  totalItems: number = 0;
+
   constructor() { 
     console.log('CartService created');
+  }
+
+  private calculate() {
+    this.amount = 0;
+    this.totalItems = 0;
+
+    for (let item of this.cartItems) {
+      this.amount += item.price * item.qty;
+      this.totalItems += item.qty;
+    }
   }
 
   addItem() {
@@ -23,5 +36,7 @@ export class CartService {
                                 1);
 
     this.cartItems.push(cartItem);
+    
+    this.calculate();
   }
 }
