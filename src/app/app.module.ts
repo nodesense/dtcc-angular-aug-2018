@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     ],
 
     declarations: [
-        // all the components
+        // all the components, directives, pipes
         AppComponent,
         HomeComponent,
         HeaderComponent,
@@ -27,7 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     ],
 
     bootstrap: [
-        AppComponent
+       AppComponent
     ]
 })
 export class AppModule {

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  highlight: boolean;
+  show: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    //this.highlight = "";
   }
 
 }

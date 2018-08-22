@@ -1,3 +1,25 @@
-<p>
-  home works!
-</p>
+<div>
+ <h2>Home</h2>
+
+  <p [ngClass]="{highlightColor: highlight}" 
+     (mouseenter)="highlight = true " 
+     (mouseleave)="highlight = false"
+  >
+    
+      Welcome to product app, 
+      you can browser and order products
+  </p>
+
+  <!-- structural directive * => add/remove DOM elements -->
+
+  <button (click)="show = !show">
+     {{ show? "Hide": "Show" }} Time
+  </button>
+
+  <p *ngIf="show == true">
+    Contact time: 9:00 AM to 5:00 PM
+  </p>
+
+
+
+</div>
