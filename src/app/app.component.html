@@ -4,8 +4,15 @@
     <app-header>
     </app-header>
 
-    <app-home>
+    <app-home *ngIf="showHome == true" >
     </app-home>
+
+    <app-cart>
+    </app-cart>
+
+    <button (click)="showHome = !showHome">
+        Show/Hide Home
+    </button>
 
     <!-- passing data from parent to child using input -->
     <app-footer  [company]="appTitle"

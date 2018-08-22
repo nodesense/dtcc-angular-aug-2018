@@ -1,6 +1,12 @@
 <div>
  <h2>Home</h2>
 
+ <p>Home Likes {{homeLikes}}</p>
+
+ <button (click)= "homeLikes = homeLikes + 1">
+   Home Likes + 1
+ </button>
+
   <p [ngClass]="{highlightColor: highlight}" 
      (mouseenter)="highlight = true " 
      (mouseleave)="highlight = false"

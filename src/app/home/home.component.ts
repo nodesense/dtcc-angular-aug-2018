@@ -10,7 +10,11 @@ export class HomeComponent implements OnInit {
   highlight: boolean;
   show: boolean = true;
 
-  constructor() { }
+  homeLikes: number = 100;
+
+  constructor() { 
+    console.log('Home component created')
+  }
 
   ngOnInit() {
     //this.highlight = "";
