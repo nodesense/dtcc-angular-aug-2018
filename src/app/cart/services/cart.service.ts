@@ -39,4 +39,10 @@ export class CartService {
     
     this.calculate();
   }
+
+  addItemFromProduct(item: CartItem) {
+    this.cartItems.push(item);
+    this.calculate();
+  }
+
 }

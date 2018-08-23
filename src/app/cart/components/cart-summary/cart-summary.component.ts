@@ -10,9 +10,17 @@ export class CartSummaryComponent implements OnInit {
   // current date and time
   today: Date = new Date();
 
+  fullName: string;
+  address: string;
+  email: string;
+  zipcode: number;
+
   constructor(public cartService: CartService) { }
 
   ngOnInit() {
   }
 
+  save() {
+     alert (this.fullName + ', ' + this.address + ', ' + this.email);
+  }
 }

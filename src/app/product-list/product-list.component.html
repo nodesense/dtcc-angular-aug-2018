@@ -1,0 +1,30 @@
+<h2>Product List</h2>
+
+<form>
+   Field Name 
+   <select name="fieldName"  [(ngModel)]="selectedField" >
+      <option *ngFor="let fieldName of fieldList"
+              [value]="fieldName">
+            {{fieldName}}
+      </option>
+   </select>
+
+   Sort Type
+   <select name="sortType"  [(ngModel)]="sortField">
+       <option value="asc">Asc</option>
+       <option value="desc">Desc</option>
+   </select>
+</form>
+
+<p>Now Sorting {{selectedField}} by {{sortField}}</p>
+
+<ul>
+  <li *ngFor="let product of (products | sort:selectedField:sortField)">
+     {{product.name}}-{{product.price | currency}}
+
+     <button (click)="addToCart(product)">
+       +Cart
+     </button>
+
+  </li>
+</ul>

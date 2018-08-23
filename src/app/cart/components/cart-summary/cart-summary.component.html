@@ -7,6 +7,23 @@
 
 <p> Custom format {{today | date:'yyyy/MM/dd' }}</p>
 
+<form (ngSubmit)="save()">
+  Full Name 
+    <input name="fullName" [(ngModel)]="fullName"
+
+          required
+          minlength="2"
+    />
+  Address
+    <textarea name="addr" [(ngModel)]="address" >
+    </textarea>
+  Email
+    <input name="email" type="email" [(ngModel)]="email" />
+  Zipcode
+    <input name="zip" type="number" [(ngModel)]="zipcode" />
+
+    <button type="submit">Save</button>
+</form>
 
 
 <!-- debug purpose -->

@@ -4,11 +4,21 @@
     <app-header>
     </app-header>
 
-    <app-home  >
+    <!-- part of angular-router
+         place holder for dynamic views
+         Home, About, etc to be hosted here
+    -->
+
+    <router-outlet>
+
+    </router-outlet>
+
+
+    <!-- <app-home  >
     </app-home>
 
     <app-cart>
-    </app-cart>
+    </app-cart> -->
  
 
     <!-- passing data from parent to child using input -->
@@ -39,7 +49,10 @@
     <button (click)="pageLikes = pageLikes - 1">
         -1
     </button>
-
+<!-- 
+    <app-contact *ngIf="pageLikes % 2 == 0">
+    </app-contact> -->
+ 
     <button (click)="greeting()">
         Greet
     </button>
