@@ -1,6 +1,10 @@
 <div>
  <h2>Home</h2>
 
+<p>{{2048 | fileSize}}</p>
+
+<p>{{ (2048 * 1000) | fileSize:'MB'}}</p>
+
  <p>Home Likes {{homeLikes}}</p>
 
  <button (click)= "homeLikes = homeLikes + 1">
@@ -18,7 +22,7 @@
 
   <!-- structural directive * => add/remove DOM elements -->
 
-  <button (click)="show = !show">
+  <button (click)="show = !show"  appHighlight color="yellow">
      {{ show? "Hide": "Show" }} Time
   </button>
 

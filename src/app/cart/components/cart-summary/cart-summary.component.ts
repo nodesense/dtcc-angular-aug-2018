@@ -7,6 +7,8 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./cart-summary.component.css']
 })
 export class CartSummaryComponent implements OnInit {
+  // current date and time
+  today: Date = new Date();
 
   constructor(public cartService: CartService) { }
 

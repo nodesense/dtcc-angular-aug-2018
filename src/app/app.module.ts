@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartModule } from './cart/cart.module';
+import { FileSizePipe } from './pipes/file-size.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 // meta data
@@ -23,7 +25,9 @@ import { CartModule } from './cart/cart.module';
         AppComponent,
         HomeComponent,
         HeaderComponent,
-        FooterComponent, 
+        FooterComponent,
+        FileSizePipe,
+        HighlightDirective, 
 
         // all your components
     ],

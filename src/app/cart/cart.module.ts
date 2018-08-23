@@ -15,7 +15,7 @@ import { CartService } from './services/cart.service';
       CartSummaryComponent],
 
   // to use in other module, component to be exported
-  exports: [
+  exports: [ // specific to angular
     CartComponent
   ],
 
@@ -24,4 +24,4 @@ import { CartService } from './services/cart.service';
   ]
 
 })
-export class CartModule { }
+export class CartModule { } // specific to ES6/JS

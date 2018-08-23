@@ -2,3 +2,14 @@
 
 <p> Amount {{cartService.amount}} </p>
 <p> Total Items {{cartService.totalItems}} </p>
+
+<p> Today {{today | date:'fullDate' | uppercase}}</p>
+
+<p> Custom format {{today | date:'yyyy/MM/dd' }}</p>
+
+
+
+<!-- debug purpose -->
+<pre>
+  {{cartService.cartItems | json}}
+</pre>
